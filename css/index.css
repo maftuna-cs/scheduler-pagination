@@ -1,0 +1,149 @@
+/* Custom properties */
+:root {
+
+}
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel__track-container {
+  position: relative;
+  background: #592;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel__track {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: transform ease-in 250ms;
+}
+
+.carousel__slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel__button i {
+  font-size: 2em;
+}
+
+.carousel__button--left {
+  left: -40px;
+}
+
+.carousel__button--right {
+  right: -40px;
+}
+
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.carousel__indicator {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hidden {
+  display: none;
+}
+
+
+body {
+  background-color: #ddd;
+  color: #111;
+  font: 1em helvetica, arial, sans-serif;
+}
+
+.courses {
+  display: grid;
+  grid-gap: 1em;
+}
+
+.course {
+  background-color: #fff;
+  padding: 0 1em;
+  overflow: hidden;
+  box-shadow: 0 0 1em rgba(0,0,0,0.4);
+  position: relative;
+  /* margin: 1em 0; */
+}
+.course.soldout {
+  box-shadow: none;
+  background-color: #eee;
+  color: #999;
+}
+
+.course-register {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.cat-design {
+  border-left: 5px solid tomato;
+}
+.cat-development {
+  border-left: 5px solid teal;
+}
+.callout {
+  display: inline-block;
+  font-size: 0.5em;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  vertical-align: top;
+  background-color: grey; 
+  color: white;
+  text-shadow: 0.125em 0.125em 0 rgba(0,0,0,0.4);
+  box-shadow: 0 0 0.25em rgba(0,0,0,0.4);
+}
+.urgent {
+  background-color: crimson;
+}
+
+
+
+@media screen and (min-width: 40em) {
+  .grid-view {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-view .course-info {
+    display: none;
+  }
+}
